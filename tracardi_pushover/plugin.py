@@ -3,6 +3,7 @@ from tracardi_plugin_sdk.action_runner import ActionRunner
 
 
 class pushOver(ActionRunner):
+    pass
 
 
 def register() -> Plugin:
