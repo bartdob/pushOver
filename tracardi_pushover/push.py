@@ -1,38 +1,28 @@
 import http.client, urllib
-import aiohttp
 from dotenv import load_dotenv
-import sys
 import os
+import aiohttp
+import asyncio
+import urllib.parse
 load_dotenv()
 
 
 def pushover():
     print("START")
-    conn = http.client.HTTPSConnection("api.pushover.net:443")
-    conn.request("POST", "/1/messages.json",
-                 urllib.parse.urlencode({
-                     "token": os.getenv('APP_TOKEN'),
-                     "user": os.getenv('USER_KEY'),
-                     "message": "hello world",
-                 }), {"Content-type": "application/x-www-form-urlencoded"})
-    conn.getresponse()
-    print("END PROGRAM")
 
+    url = "https://api.pushover.net/1/messages.json"
+    payload = {"token": os.getenv('APP_TOKEN'),
+               "user": os.getenv('USER_KEY'),
+               "message": "Helllo"}
+    result = urllib.parse.urlencode(payload)
+    head = {"Content-type": "application/x-www-form-urlencoded"}
 
+    print(url, payload, result)
 
-# import aiohttp
-# import asyncio
-#
-# async def main():
-#
-#     async with aiohttp.ClientSession() as session:
-#         async with session.get('http://python.org') as response:
-#
-#             print("Status:", response.status)
-#             print("Content-type:", response.headers['content-type'])
-#
-#             html = await response.text()
-#             print("Body:", html[:15], "...")
-#
-# loop = asyncio.get_event_loop()
-# loop.run_until_complete(main())
+    async def main():
+        print("START")
+        async with aiohttp.ClientSession() as session:
+            await session.post(url, data=result, headers=head)
+
+    asyncio.run(main())
+
