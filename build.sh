@@ -3,4 +3,4 @@ python -m twine upload dist/*
 
 rm -rf build
 rm -rf dist
-rm -rf tracardi_redshift_connector.egg-info
+rm -rf tracardi_pushover.egg-info

@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name='tracardi-pushover',
+    name='tracardi-pushover-webhook',
     version='0.1',
     description='The purpose of this plugin is to connect with pushover app',
     long_description=long_description,
@@ -23,7 +23,7 @@ setup(
     ],
     classifiers=[
         "Programming Language :: Python :: 3",
-        "License :: Other/Proprietary License",
+        "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
     keywords=['tracardi', 'plugin'],

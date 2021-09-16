@@ -1,0 +1,7 @@
+pydantic
+tracardi-plugin-sdk
+aiohttp
+urllib3
+
+python-dotenv
+asyncio
