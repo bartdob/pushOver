@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 
 
-class Configuration(BaseModel):
+class PushOverPayload(BaseModel):
     token: str
     user: str
     message: str

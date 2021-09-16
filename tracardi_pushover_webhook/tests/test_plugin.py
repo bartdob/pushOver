@@ -7,8 +7,8 @@ load_dotenv()
 
 
 init = dict(
-    token=os.getenv('API_TOKEN'),
-    user=os.getenv('USER_KEY'),
+    api_token=os.getenv('API_TOKEN'),
+    user_key=os.getenv('USER_KEY'),
     message="Test message"
 )
 
