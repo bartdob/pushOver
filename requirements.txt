@@ -1,6 +1,8 @@
 pydantic
 tracardi-plugin-sdk
+tracardi
 aiohttp
+aiodns
 urllib3
 
 python-dotenv

@@ -11,12 +11,12 @@ setup(
     long_description_content_type="text/markdown",
     author='Bartosz Dobrosielski`',
     author_email='bdobrosielski@edu.cdv.pl',
-    packages=['tracardi_pushover'],
+    packages=['tracardi_pushover_webhook'],
     install_requires=[
         'pydantic',
         'asyncio',
         'tracardi-plugin-sdk',
-        'psycopg2-binary>=2.9.1',
+        'tracardi',
         'aiodns==3.0.0',
         'aiohttp==3.7.4',
         'urllib3==1.26.6'
