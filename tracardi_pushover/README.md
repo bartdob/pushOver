@@ -1,1 +1,0 @@
-Tracardi Plugin to connect Tracardii to Amazon with PushOver App
